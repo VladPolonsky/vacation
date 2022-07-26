@@ -1,0 +1,42 @@
+CREATE DATABASE vacation;
+
+USE vacation;
+
+CREATE TABLE users(
+id int auto_increment,
+name VARCHAR(50),
+lname VARCHAR(50),
+username VARCHAR(50),
+password VARCHAR(50),
+role INT,
+PRIMARY KEY(id)
+
+);
+CREATE TABLE vacations(
+id INT auto_increment,
+descrip VARCHAR(200),
+dest VARCHAR(50),
+img VARCHAR(150),
+start_date VARCHAR(10),
+end_date VARCHAR(10),
+price INT,
+follow INT,
+PRIMARY KEY(id)
+);
+
+CREATE TABLE users_vacations(
+users_id INT,
+vacations_id INT,
+PRIMARY KEY (users_id,vacations_id)
+);
+
+INSERT INTO users (name,lname,username,password,role)
+VALUES ("Daniel","Cohen","dannyC","123",0),("Rivka","Guber","rivG","567",0),("Lahav","Kapulsky","LahKap","777",0),("Richard","Kenya","richK","rich4ever",0),("Binyamin","Neta","bibinet","1111",0),("Pamela","Stone","Pamston","555",0),("admin","admin","admin","admin",1);
+
+INSERT INTO vacations(descrip,dest,img,start_date,end_date,price,follow)
+VALUES ("Located in the heart of mainland Southeast Asia, Thailand is a country of mountains, hills","Thailand","https://wallpaperaccess.com/full/150575.jpg","01/01/2020","03/01/202",500,2),
+("New York is a city of diversity and dynamism. It is also a city of politics, economy and culture","New york","https://i.natgeofe.com/k/5b396b5e-59e7-43a6-9448-708125549aa1/new-york-statue-of-liberty_16x9.jpg","02/01/2023","22/03/2023",1500,5),
+("Ukraine is a country in Eastern Europe and the second-largest country in Europe after Russia","Ukraine","https://www.state.gov/wp-content/uploads/2018/11/Ukraine-2109x1406.jpg","02/01/2023","05/01/2023",350,22),
+("Amsterdam is the capital and largest city in the European country of the Netherlands. Amsterdam is famous for its canals and dikes","Amsterdam","https://media.gettyimages.com/photos/view-of-canal-in-amsterdam-picture-id923546342?s=612x612","02/05/2023","22/06/2023",700,15),
+("The Democratic People's Republic of Korea (DPRK, also known as North Korea) is a highly centralised totalitarian state","North Korea","https://images.adsttc.com/media/images/5e74/d4eb/b357/65c4/5c00/02d0/newsletter/christiano_baticci.jpg?1584714979","11/11/2023","12/12/2023",2500,4);
+ 

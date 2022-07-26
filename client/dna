@@ -1,0 +1,50 @@
+===================DONE============
+LOGIN
+Header
+Main
+REGISTER
+VACATIONS 
+     VacCard
+AddVac
+- generate components 
+
+ -App component:
+   -jsx: Header,Main
+ -Header component:
+   -jsx: links to pages,logout/login
+
+ -Main component:
+   -jsx: router
+
+
+-Login components:
+   -state: inps
+   -functions: fetch login to the server , redirect to vacations and save to LS if 200
+   -jsx:inputs , submit btn , link to register
+
+-Register components:
+   -state: inps
+   -functions:fetch register to the server , redirect to login if 200
+   -jsx:inputs , submit btn , link to login
+-Vacations components:
+   -state: vacArr,
+   -functions:getVacations from server(useEffect)
+   -jsx:map over varArr => <VacCard vac>
+
+-VacCard components:
+   
+   -props: vac
+   -functions:fetch follow to the server
+   -jsx: descrip,dest,img.start_date,end_date,price,follow , followbtn
+
+-AddVac components:
+   -state:inps  
+   -functions: fetch
+   -jsx:inps,submit btn
+
+- hide/show links by user login/guest
+===================TODO============
+
+
+
+
